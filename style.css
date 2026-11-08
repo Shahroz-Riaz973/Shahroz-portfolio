@@ -472,64 +472,27 @@ footer {
    MOBILE RESPONSIVENESS MEDIA QUERIES
    ========================================= */
 @media (max-width: 768px) {
-    .navbar {
-        padding: 1rem 5%;
+    .menu-toggle {
+        display: block;
     }
-    
+
     .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 0 5%;
-        padding-top: 5rem;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: 2.3rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .section {
-        padding: 4rem 5%;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .about-text {
-        padding: 1.5rem;
-    }
-
-    .terminal-body {
-        padding: 1.2rem;
-        font-size: 0.78rem;
-    }
-
-    .contact-wrapper {
-        padding: 1.5rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-actions {
+        display: none !important;
         flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(9, 13, 22, 0.98);
+        backdrop-filter: blur(15px);
+        padding: 1.5rem 0;
+        border-bottom: 1px solid var(--border-color);
+        text-align: center;
+        gap: 1.2rem;
+        z-index: 1000;
     }
 
-    .contact-btn {
-        width: 100%;
-        justify-content: center;
+    .nav-links.active {
+        display: flex !important;
     }
 }
